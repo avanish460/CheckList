@@ -1,9 +1,9 @@
-.container {
+.main-container {
   background-color: red;
   padding: 50px;
   border-radius: 10%;
   display: block;
-  width: 375px;
+  width: 475px;
   margin-top: 1rem;
   margin-left: 30rem;
 }
@@ -19,10 +19,10 @@
   height: 30px;
 }
 
-.navbar {
+/* .navbar {
   background-color: rgba(0, 0, 255, 0.801);
   height: 4rem;
-}
+} */
 .h1 {
   font-size: 30px;
   font-weight: bolder;
@@ -32,7 +32,7 @@
 }
 .left {
   margin-left: 15rem;
-  font-size: 40px;
+  font-size: 20px;
 }
 .size {
   height: 45px;
