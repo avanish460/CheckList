@@ -4,7 +4,7 @@ body{
   
   
   .circle{
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     background: white;
     animation: ripple 15s infinite;
