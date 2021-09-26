@@ -23,6 +23,7 @@
                padding-right: 0px;
                margin-right: 0px;
                margin-left: 0px;
+               margin-bottom: 0px;
       ">
     <!-- Background animation-->
     <div class="background">
@@ -36,40 +37,37 @@
         <!-- Navbar content -->
         <img src="1.png" alt="logo">
 
-        <div class="navbar">
+        <!-- <div class="navbar">
           <a href="#" target="_blank" style="color:black; text-decoration: none; padding: 0px 30px 0px 0px;">Home</a>
-          <a href="#" target="_blank"
+          <a href="completed.html" target="_blank"
             style="color:black; text-decoration: none; padding: 0px 30px 0px 0px;">Donework</a>
-          <a href="#" target="_blank"
+          <a href="remain.html" target="_blank"
             style="color:black; text-decoration: none; padding: 0px 30px 0px 0px;">leftwork</a>
-        </div>
-        <h3 style="font-family: cursive; font-weight: bold; color: yellow;"> <img
-            src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="40px">, CHECK YOUR
-          DAILY LIST WITH 'CHECKLIST'</h3>
+        </div> -->
+        <h3 style="font-family: cursive; font-weight: bold; color: yellow;" class="toBeReplaced"> <img
+            src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="40px">, <span> CHECK YOUR
+          DAILY LIST WITH 'CHECKLIST'</span></h3>
         <div class="card text-white bg-dark mb-3" style="max-width: 8rem; margin-bottom: 0rem!important;">
 
           <span id="time" style="font-size: 12px; font-weight: bolder; text-align: center;"></span>
         </div>
-        <!-- <h1 class="h1 left">Avanish To Do List</h1> -->
-        <!-- <img src="AVD_back.png" alt="user_Image" class="left size" /> -->
+       
 
       </nav>
 
-      <!-- <nav class="navbar navbar-light" style="background-color: #e3f2fd;"> -->
-      <!-- Navbar content -->
-      <!-- </nav> -->
+     
 
       <div class="main-container">
         <h2 id="maintext">Make your Work List</h2>
         <img src="outline_keyboard_black_24dp.png" alt="Input" height="25px" />
-        <input type="text" id="title" placeholder="Enter work name" style="width: 350px" />
+        <input type="text" id="title" class="first" placeholder="Enter work name" />
         <img class="space" src="outline_description_black_24dp.png" alt="Description" height="25px" />
-        <textarea name="Description" id="description" cols="50" rows="7" placeholder="Description"></textarea>
+        <textarea name="Description" id="description" class="second" cols="50" rows="7" placeholder="Description"></textarea>
 
         <input type="text" id="starting" placeholder="Starting time" />
         <input type="text" id="ending" placeholder="Ending time" />
 
-
+         <br>
         <button id="btn" class="space">Add</button>
         <button id="remove"
           style="background-color: rgb(0, 183, 255); border-radius: 10%; width: auto; height: 30px;">Remove_all</button>
@@ -90,13 +88,13 @@
 
       <div class="my-4">
         <h2 style="text-align: center; color: yellow;">Today's List</h2>
-        <table style="border-collapse: separate; color: lawngreen;">
+        <table style="border-collapse: separate;">
           <thead>
             <tr>
               <th scope="col">S.No</th>
               <th scope="col">Work's Name</th>
               <th scope="col">Description</th>
-              <th scope="col">Time Duration</th>
+              <th scope="col" class="remove">Time Duration</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -106,14 +104,69 @@
               <th scope="row"></th>
               <td></td>
               <td></td>
-              <td></td>
-              <td><button id="btn" style="background-color: rgba(0, 0, 255, 0.849); width: auto;">Completed</button>
+              <td class="remove"></td>
+              <td><button id="btn" class="comp" style="background-color: rgba(0, 0, 255, 0.849); width: auto;">Completed</button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
+
     </div>
+    
+    <!-- <div class="my-4" style="background-color: lightgreen; padding: 0; margin: 0;">
+      <h2 style="text-align: center;">Completed List</h2>
+      <table style="border-collapse: separate;">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Work's Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time Duration</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tablebody">
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button id="btn" style="background-color: rgba(0, 0, 255, 0.849); width: auto; color: white;">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="my-4" style="background-color: lightsalmon;">
+    <h2 style="text-align: center;">Remain List</h2>
+    <table style="border-collapse: separate;">
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">Work's Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Time Duration</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="tablebody">
+        <tr>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button id="btn" style="background-color: rgba(0, 0, 255, 0.849); width: auto; color: white;">delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ </div> -->
 
     <script src="javascript.js"></script>
 </body>

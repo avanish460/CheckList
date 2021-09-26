@@ -48,6 +48,16 @@ function update() {
   let Str = "";
 
   itemJsonArray.forEach((element, index) => {
+
+    if(screen.availWidth < 700){
+      Str += `
+      <tr>
+            <th scope="row">${index + 1}</th>
+            <td>${element[0]}</td>
+            <td>${element[1]}</td>
+            <td><button id="btn" onclick="itemDeleted(${index})" style="background-color: rgba(0, 0, 255, 0.849); width:auto;">Completed</button></td>
+          </tr>`;
+    }else{
     Str += `
     <tr>
           <th scope="row">${index + 1}</th>
@@ -56,6 +66,7 @@ function update() {
           <td>${element[2]} to ${element[3]}</td>
           <td><button id="btn" onclick="itemDeleted(${index})" style="background-color: rgba(0, 0, 255, 0.849); width:auto;">Completed</button></td>
         </tr>`;
+    }
   });
 
   tableBody.innerHTML = Str;
@@ -69,7 +80,6 @@ update();
 function itemDeleted(itemIndex) {
   itemJsonArrayStr = localStorage.getItem("itemsJson");
   itemJsonArray = JSON.parse(itemJsonArrayStr);
-  //Delete itemIndex element from the Array
   itemJsonArray.splice(itemIndex, 1);
   localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
   update();
