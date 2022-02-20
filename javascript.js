@@ -65,6 +65,7 @@ function update() {
           <td>${element[1]}</td>
           <td>${element[2]} to ${element[3]}</td>
           <td><button id="btn" onclick="itemDeleted(${index})" style="background-color: rgba(0, 0, 255, 0.849); width:auto;">Completed</button></td>
+          <td><button id="alrm" style="background-color: rgba(0,0,255,0.849); width:auto;">SetAlarm</button></td>
         </tr>`;
     }
   });
@@ -76,6 +77,20 @@ add.addEventListener("click", getAndUpdate);
 var removeAll = document.getElementById("remove");
 removeAll.addEventListener("click", clearStorage);
 update();
+
+let alrmbtn = document.querySelector('#alrm');
+
+alrmbtn.addEventListener('click', () => {
+
+   window.open("setalarm.html");  
+});
+
+function loadPage()
+{
+
+     window.location="setalarm.html";
+
+}
 
 function itemDeleted(itemIndex) {
   itemJsonArrayStr = localStorage.getItem("itemsJson");
